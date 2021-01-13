@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from '../SidebarData';
 import './Sidebar.css';
 import { IconContext} from 'react-icons';
+import AppBar from '@material-ui/core/AppBar';
 
 export default function Sidebar() {
     const [sidebar, setSidebar] = useState(false);
@@ -12,13 +13,15 @@ export default function Sidebar() {
     const showSidebar = () => setSidebar(!sidebar);
     
     return (
+        
         <>
           <IconContext.Provider value={{ color: '#fff' }}>
-            <div className='sidebar'>
+            <div className='header'>
                 <Link to="#" className='menu-bars'>
                     <FaIcons.FaBars onClick={showSidebar} />
                 </Link>
             </div>
+         
             <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
             <ul className='nav-menu-items' onClick={showSidebar}>
             <li className='navbar-toggle'>

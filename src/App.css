@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-.navbar {
-    background-color: #060b26;
+.header {
+    background-color: #413AAE;
     height: 80px;
     display: flex;
     justify-content: start;
@@ -15,7 +15,7 @@
   }
   
   .nav-menu {
-    background-color: #060b26;
+   
     width: 250px;
     height: 100vh;
     display: flex;
@@ -53,7 +53,7 @@
   }
   
   .nav-text a:hover {
-    background-color: #1a83ff;
+    background-color:#ffffff;
   }
   
   .nav-menu-items {
@@ -61,7 +61,7 @@
   }
   
   .navbar-toggle {
-    background-color: #060b26;
+    /* background-color: #1E33BE; */
     width: 100%;
     height: 80px;
     display: flex;
