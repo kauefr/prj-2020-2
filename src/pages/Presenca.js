@@ -3,9 +3,11 @@ import React from 'react';
 
 function Presenca() {
   return (
-    <div className='presenca'>
-      <h1>Presença</h1>
+    <div class="wrapper">
+    <div class="container">
+       <h1> Presença</h1>
     </div>
+  </div>
   );
 }
 

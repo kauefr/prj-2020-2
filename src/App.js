@@ -3,7 +3,7 @@ import './App.css';
 import Sidebar from './components/sidebar/Sidebar';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Dashboard from './Dashboard'
-import Alunos from './pages/Alunos';
+import Alunos from './components/alunos/Alunos';
 import Atividades from './pages/Atividades';
 import Presenca from './pages/Presenca';
 import Relatorios from './pages/Relatorios';

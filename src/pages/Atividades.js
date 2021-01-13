@@ -1,11 +1,16 @@
 import React from 'react';
 
-
 function Atividades() {
   return (
-    <div className='atividades'>
-      <h1>Atividades</h1>
-    </div>
+  
+    <div class="grid-container">
+        <div class="item1">Header</div>
+        <div class="item2">Menu</div>
+        <div class="item3">Main</div>  
+        <div class="item4">Right</div>
+        <div class="item5">Footer</div>
+      </div>
+  
   );
 }
 

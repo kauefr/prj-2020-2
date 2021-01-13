@@ -2,6 +2,9 @@ import React from 'react'
 
 export default function(props) {
     return (
-        <h1>Dashboard</h1>
+        <div class="wrapper">
+       <h1>HOME</h1>
+      
+     </div>
     );
 }
