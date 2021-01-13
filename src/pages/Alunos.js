@@ -1,13 +1,11 @@
 import React from 'react';
-import AlunoRow from './AlunoRow'
-import ALUNOS from './Mocks/ListaAlunos'
+import AlunoTable from '../AlunoTable.jsx'
 
 function Alunos() {
   return (
     <div className='alunos'>
       <h1>Alunos</h1>
-     
-    
+      <AlunoTable/>
     </div>
   );
 }
