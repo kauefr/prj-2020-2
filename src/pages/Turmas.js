@@ -1,11 +1,14 @@
 import React from 'react';
 
 
+
 function Turmas() {
-  return (
-    <div className='Turmas'>
-      <h1>Turmas</h1>
+  return (   
+  <div class="wrapper">
+    <div class="container">
+       <h1> Turmas</h1>
     </div>
+  </div>
   );
 }
 

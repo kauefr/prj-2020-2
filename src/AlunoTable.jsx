@@ -2,9 +2,11 @@ import React from 'react'
 import AlunoRow from './AlunoRow'
 import ALUNOS from './Mocks/ListaAlunos'
 
+
 export default function(props) {
     const rows = ALUNOS.map((aluno) => <AlunoRow {...aluno}></AlunoRow>);
     return (
+        <div classname= "tabela-alunos">
         <table>
             <thead>
                 <tr>
@@ -17,5 +19,6 @@ export default function(props) {
                 {rows}
             </tbody>
         </table>
+        </div>
     );
 }
