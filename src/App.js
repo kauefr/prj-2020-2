@@ -8,6 +8,7 @@ import Atividades from './pages/Atividades';
 import Presenca from './pages/Presenca';
 import Relatorios from './pages/Relatorios';
 import Turmas from './pages/Turmas';
+import CadastrarAluno from './components/cadastrarAluno/CadastrarAluno';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Sidebar />
       <Switch>
         <Route path='/' exact component={Dashboard} />
+        <Route path='/alunos/cadastrar' component={CadastrarAluno} />
         <Route path='/alunos' component={Alunos} />
         <Route path='/presenca' component={Presenca} />
         <Route path='/atividades' component={Atividades} />
