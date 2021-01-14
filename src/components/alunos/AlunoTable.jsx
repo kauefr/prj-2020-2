@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import AlunoRow from './AlunoRow'
 
-export default function (props) {
+export default function AlunoTable(props) {
     const [alunos, setAlunos] = useState([]);
 
     useEffect(() => {
