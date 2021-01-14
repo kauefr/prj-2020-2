@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 
-export default function (props) {
+export default function Form(props) {
     const [nome, setNome] = useState('');
     function onNomeChange(event) { setNome(event.target.value) }
 
@@ -10,10 +10,15 @@ export default function (props) {
     const [ano, setAno] = useState('');
     function onAnoChange(event) { setAno(event.target.value) }
 
-    function handleSubmit(event) {
-        console.log({ nome, ra, ano })
-
-    }
+    const handleSubmit = useCallback(async (event) => {
+        const response = await fetch("http://localhost:3333/alunos", {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ nome, ra, anoIngresso: parseInt(ano, 10) })
+        });
+        console.log(response.json());
+        return response;
+    }, [nome, ra, ano]);
 
     return (
         <form>

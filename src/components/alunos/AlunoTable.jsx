@@ -4,10 +4,13 @@ import AlunoRow from './AlunoRow'
 export default function (props) {
     const [alunos, setAlunos] = useState([]);
 
-    useEffect(async () => {
-        const response = await fetch("http://localhost:3333/alunos");
-        const data = await response.json();
-        setAlunos(data);
+    useEffect(() => {
+        async function fetchData() {
+            const response = await fetch("http://localhost:3333/alunos");
+            const data = await response.json();
+            setAlunos(data);
+        };
+        fetchData();
     }, []);
 
     const rows = alunos.map((aluno) => <AlunoRow {...aluno}></AlunoRow>);
