@@ -24,15 +24,15 @@ export default function Form(props) {
         <form>
             <ul>
                 <li>
-                    <label for="nome">Nome</label>
+                    <label htmlFor="nome">Nome</label>
                     <input id="nome" value={nome} onChange={onNomeChange} />
                 </li>
                 <li>
-                    <label for="ra">RA</label>
+                    <label htmlFor="ra">RA</label>
                     <input id="ra" value={ra} onChange={onRaChange} />
                 </li>
                 <li>
-                    <label for="ano">Ano de Ingresso</label>
+                    <label htmlFor="ano">Ano de Ingresso</label>
                     <input id="ano" value={ano} onChange={onAnoChange} />
                 </li>
                 <li>
