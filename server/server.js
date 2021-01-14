@@ -8,18 +8,18 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const database = new Sequelize({
+const sequelize = new Sequelize({
     dialect: 'sqlite',
     storage: './test.sqlite',
 });
 
-const Aluno = database.define('alunos', {
+const Aluno = sequelize.define('Aluno', {
     nome: Sequelize.STRING,
     ra: Sequelize.STRING,
     anoIngresso: Sequelize.INTEGER
 });
 
-finale.initialize({ app, sequelize: database });
+finale.initialize({ app, sequelize });
 
 finale.resource({
     model: Aluno,
@@ -28,7 +28,7 @@ finale.resource({
 
 const port = 3333;
 
-database.sync().then(() => {
+sequelize.sync().then(() => {
     app.listen(port, () => {
         console.log(`Listening on port ${port}`);
     });
