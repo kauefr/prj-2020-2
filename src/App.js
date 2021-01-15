@@ -2,14 +2,14 @@ import React from 'react';
 import './App.css';
 import Sidebar from './components/sidebar/Sidebar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Dashboard from './Dashboard'
+import Dashboard from './components/dashboard/Dashboard'
 import Alunos from './components/alunos/Alunos';
 import Atividades from './pages/Atividades';
 import Presenca from './pages/Presenca';
 import Relatorios from './pages/Relatorios';
 import Turmas from './components/turmas/Turmas';
 import CadastrarAluno from './components/cadastrarAluno/CadastrarAluno';
-import DetalhesTurma from './detalhesTurma/DetalhesTurma';
+import DetalhesTurma from './components/detalhesTurma/DetalhesTurma';
 import CadastrarTurma from './components/cadastrarTurma/CadastrarTurma';
 
 function App() {

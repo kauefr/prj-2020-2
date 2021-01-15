@@ -11,17 +11,18 @@ export default function Form(props) {
     function onAnoChange(event) { setAno(event.target.value) }
 
     const handleSubmit = useCallback(async (event) => {
+        event.preventDefault();
         const response = await fetch("http://localhost:3333/alunos", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ nome, ra, situacao: 'ATIVO', anoIngresso: parseInt(ano, 10) })
         });
-        console.log(response.json());
-        return response;
+        const data = await response.json();
+        console.log(data);
     }, [nome, ra, ano]);
 
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <ul>
                 <li>
                     <label htmlFor="nome">Nome</label>
@@ -36,7 +37,7 @@ export default function Form(props) {
                     <input id="ano" value={ano} onChange={onAnoChange} />
                 </li>
                 <li>
-                    <button type="button" onClick={handleSubmit}>Enviar</button>
+                    <button>Enviar</button>
                 </li>
             </ul>
         </form>

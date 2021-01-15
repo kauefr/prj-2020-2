@@ -8,6 +8,7 @@ export default function CadastrarTurma(props) {
     function onPeriodoChange(event) { setPeriodo(event.target.value) }
 
     const handleSubmit = useCallback(async (event) => {
+        event.preventDefault();
         const response = await fetch("http://localhost:3333/turmas", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -20,7 +21,7 @@ export default function CadastrarTurma(props) {
     return (
         <>
             <h1>Cadastrar Turma</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <ul>
                     <li>
                         <label htmlFor="nome">Nome</label>
@@ -31,7 +32,7 @@ export default function CadastrarTurma(props) {
                         <input id="periodo" value={periodo} onChange={onPeriodoChange} />
                     </li>
                     <li>
-                        <button type="button" onClick={handleSubmit}>Enviar</button>
+                        <button>Enviar</button>
                     </li>
                 </ul>
             </form>
