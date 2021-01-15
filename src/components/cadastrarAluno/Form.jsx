@@ -14,7 +14,7 @@ export default function Form(props) {
         const response = await fetch("http://localhost:3333/alunos", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ nome, ra, anoIngresso: parseInt(ano, 10) })
+            body: JSON.stringify({ nome, ra, situacao: 'ATIVO', anoIngresso: parseInt(ano, 10) })
         });
         console.log(response.json());
         return response;

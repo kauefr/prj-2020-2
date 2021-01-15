@@ -7,7 +7,7 @@ import Alunos from './components/alunos/Alunos';
 import Atividades from './pages/Atividades';
 import Presenca from './pages/Presenca';
 import Relatorios from './pages/Relatorios';
-import Turmas from './pages/Turmas';
+import Turmas from './components/turmas/Turmas';
 import CadastrarAluno from './components/cadastrarAluno/CadastrarAluno';
 
 

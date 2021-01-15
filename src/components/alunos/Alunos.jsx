@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './Alunos.css';
 import AlunoTable from './AlunoTable';
 
@@ -7,7 +8,7 @@ function Alunos(props) {
         <div className="container" >
             <div className="options" >
                 <h1>Alunos</h1>
-                <button className="button btn-cadastrar"> Cadastrar Aluno</button>
+                <Link to="/alunos/cadastrar">Cadastrar Aluno</Link>
                 <input type="text" className="search" name="search" placeholder="Pesquisar Aluno.." >
                 </input>
             </div>
