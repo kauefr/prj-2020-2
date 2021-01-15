@@ -4,15 +4,17 @@ const bodyParser = require('body-parser');
 const Sequelize = require('sequelize');
 const finale = require('finale-rest');
 
+// Inicializa os módulos
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
-
 const sequelize = new Sequelize({
     dialect: 'sqlite',
     storage: ':memory:',
 });
+finale.initialize({ app, sequelize });
 
+// Define as tabelas do banco de dados
 const Aluno = sequelize.define('Aluno', {
     nome: Sequelize.STRING,
     ra: Sequelize.STRING,
@@ -26,11 +28,11 @@ const Turma = sequelize.define('Turma', {
     periodo: Sequelize.STRING
 });
 
+// Define as relações
 Turma.hasMany(Aluno);
 Aluno.belongsTo(Turma);
 
-finale.initialize({ app, sequelize });
-
+// Define os endpoints da API
 finale.resource({
     model: Aluno,
     endpoints: ['/alunos', '/alunos/:id']
@@ -41,8 +43,8 @@ finale.resource({
     endpoints: ['/turmas', '/turmas/:id']
 });
 
+// Cria as tabelas e inicia o servidor na porta abaixo
 const port = 3333;
-
 sequelize.sync().then(() => {
     app.listen(port, () => {
         console.log(`Listening on port ${port}`);
