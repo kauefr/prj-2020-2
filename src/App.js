@@ -11,6 +11,7 @@ import Turmas from './components/turmas/Turmas';
 import CadastrarAluno from './components/cadastrarAluno/CadastrarAluno';
 import DetalhesTurma from './components/detalhesTurma/DetalhesTurma';
 import CadastrarTurma from './components/cadastrarTurma/CadastrarTurma';
+import NotasAluno from './components/notasAluno/NotasAluno';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Switch>
         <Route path='/' exact component={Dashboard} />
         <Route path='/alunos/cadastrar' component={CadastrarAluno} />
+        <Route path='/notas/:id' component={NotasAluno} />
         <Route path='/alunos' component={Alunos} />
         <Route path='/presenca' component={Presenca} />
         <Route path='/atividades' component={Atividades} />
