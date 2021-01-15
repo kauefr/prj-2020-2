@@ -11,4 +11,4 @@ sqlite3
 ## Execução
 
 1. Executar o npm script "start:server" do package.json. Aguardar o servidor emitir a mensagem "Listening on port 3333".
-2. Executar o npm script "start" do package.json. Aguardar o navegador abrir sozinho ou navegar até http://locahost:3000.
+2. Executar o npm script "start" do package.json. Aguardar o navegador abrir sozinho ou navegar até http://localhost:3000.
