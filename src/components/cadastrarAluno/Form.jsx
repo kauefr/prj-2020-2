@@ -12,10 +12,15 @@ export default function Form(props) {
 
     const handleSubmit = useCallback(async (event) => {
         event.preventDefault();
-        const response = await fetch("http://localhost:3333/alunos", {
+        const response = await fetch("http://localhost:3333/Alunos", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ nome, ra, situacao: 'ATIVO', anoIngresso: parseInt(ano, 10) })
+            body: JSON.stringify({
+                Nome: nome,
+                Ra: ra,
+                Situacao: 'ATIVO',
+                AnoIngresso: parseInt(ano, 10)
+            })
         });
         const data = await response.json();
         console.log(data);

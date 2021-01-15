@@ -6,7 +6,7 @@ export default function AlunoTable(props) {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch("http://localhost:3333/alunos");
+            const response = await fetch("http://localhost:3333/Alunos");
             const data = await response.json();
             setAlunos(data);
         };

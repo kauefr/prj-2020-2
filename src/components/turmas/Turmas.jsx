@@ -6,7 +6,7 @@ export default function Turmas(props) {
     const [turmas, setTurmas] = useState([]);
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch("http://localhost:3333/turmas/");
+            const response = await fetch("http://localhost:3333/Turmas/");
             const data = await response.json();
             setTurmas(data);
         };

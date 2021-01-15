@@ -16,31 +16,57 @@ finale.initialize({ app, sequelize });
 
 // Define as tabelas do banco de dados
 const Aluno = sequelize.define('Aluno', {
-    nome: Sequelize.STRING,
-    ra: Sequelize.STRING,
-    situacao: Sequelize.STRING,
-    anoIngresso: Sequelize.INTEGER,
-    numeroChamada: Sequelize.INTEGER
+    Nome: Sequelize.STRING,
+    Ra: Sequelize.STRING,
+    Situacao: Sequelize.STRING,
+    AnoIngresso: Sequelize.INTEGER,
+    NumeroChamada: Sequelize.INTEGER
 });
 
 const Turma = sequelize.define('Turma', {
-    nome: Sequelize.STRING,
-    periodo: Sequelize.STRING
+    Nome: Sequelize.STRING,
+    Periodo: Sequelize.STRING
+});
+
+const Disciplina = sequelize.define('Disciplina', {
+    Nome: Sequelize.STRING
+});
+
+const DisciplinaAluno = sequelize.define('DisciplinaAluno', {
+    P1: Sequelize.FLOAT,
+    P2: Sequelize.FLOAT,
+    Media: Sequelize.FLOAT
 });
 
 // Define as relações
 Turma.hasMany(Aluno);
 Aluno.belongsTo(Turma);
 
+Turma.hasMany(Disciplina);
+Disciplina.belongsTo(Turma);
+
+Disciplina.belongsToMany(Aluno, {through: DisciplinaAluno});
+Aluno.belongsToMany(Disciplina, {through: DisciplinaAluno});
+
 // Define os endpoints da API
 finale.resource({
     model: Aluno,
-    endpoints: ['/alunos', '/alunos/:id']
+    associations: true
 });
 
 finale.resource({
     model: Turma,
-    endpoints: ['/turmas', '/turmas/:id']
+    associations: true
+});
+
+finale.resource({
+    model: Disciplina,
+    associations: true
+});
+
+finale.resource({
+    model: DisciplinaAluno,
+    associations: true
 });
 
 // Cria as tabelas e inicia o servidor na porta abaixo

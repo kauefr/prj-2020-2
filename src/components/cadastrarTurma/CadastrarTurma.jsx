@@ -9,10 +9,10 @@ export default function CadastrarTurma(props) {
 
     const handleSubmit = useCallback(async (event) => {
         event.preventDefault();
-        const response = await fetch("http://localhost:3333/turmas", {
+        const response = await fetch("http://localhost:3333/Turmas", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ nome, periodo })
+            body: JSON.stringify({ Nome: nome, Periodo: periodo })
         });
         const data = await response.json();
         console.log(data);
