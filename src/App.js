@@ -10,7 +10,7 @@ import Relatorios from './pages/Relatorios';
 import Turmas from './components/turmas/Turmas';
 import CadastrarAluno from './components/cadastrarAluno/CadastrarAluno';
 import DetalhesTurma from './detalhesTurma/DetalhesTurma';
-
+import CadastrarTurma from './components/cadastrarTurma/CadastrarTurma';
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
         <Route path='/presenca' component={Presenca} />
         <Route path='/atividades' component={Atividades} />
         <Route path='/relatorios' component={Relatorios} />
+        <Route path='/turmas/cadastrar' component={CadastrarTurma} />
         <Route path='/turmas/:id' component={DetalhesTurma} />
         <Route path='/turmas' component={Turmas} />
       </Switch>
