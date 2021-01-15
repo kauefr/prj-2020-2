@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import TurmaRow from './TurmaRow';
 
 export default function Turmas(props) {
-    const TURMAS_MOCK = [
-        {nome: "1º ano A", periodo: "Manhã", id: 1},
-        {nome: "1º ano B", periodo: "Tarde", id: 2},
-        {nome: "1º ano C", periodo: "Manhã", id: 3},
-    ];
-    const rows = TURMAS_MOCK.map((turma, index) => <TurmaRow key={index} {...turma} />);
+    const [turmas, setTurmas] = useState([]);
+    useEffect(() => {
+        async function fetchData() {
+            const response = await fetch("http://localhost:3333/turmas/");
+            const data = await response.json();
+            setTurmas(data);
+        };
+        fetchData();
+    }, []);
+
+    const rows = turmas.map((turma, index) => <TurmaRow key={index} {...turma} />);
     return (
         <>
             <h1>Turmas</h1>

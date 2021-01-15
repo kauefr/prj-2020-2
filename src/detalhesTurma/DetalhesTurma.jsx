@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 export default function DetalhesTurma(props) {
     const { id } = useParams();
-    const [turma, setTurma] = useState();
+    const [turma, setTurma] = useState({nome: '', periodo: ''});
 
     useEffect(() => {
         async function fetchData(id) {
