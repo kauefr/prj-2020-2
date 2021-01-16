@@ -10,7 +10,9 @@ Software de gerenciamento de alunos, turmas e notas.
 
 ## Dependências
 
-sqlite3
+* Node.js
+* npm
+* sqlite3
 
 ## Execução
 
