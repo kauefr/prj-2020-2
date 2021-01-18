@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import { getAll } from '../../util';
 
 export default function NotasAluno(props) {
     const { id } = useParams();
@@ -7,12 +8,7 @@ export default function NotasAluno(props) {
     const [aluno, setAluno] = useState({Disciplinas: []});
 
     useEffect(() => {
-        async function fetchData(id) {
-            const response = await fetch("http://localhost:3333/Alunos/" + id);
-            const data = await response.json();
-            setAluno(data);
-        };
-        fetchData(id);
+        getAll("Alunos/"+id, setAluno);
     }, [id]);
 
     const rows = aluno.Disciplinas.map((disciplina, index) => {
