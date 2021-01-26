@@ -1,6 +1,4 @@
 import React from 'react';
-import './App.css';
-import Sidebar from './components/sidebar/Sidebar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Dashboard from './components/dashboard/Dashboard'
 import Alunos from './components/alunos/Alunos';
@@ -16,7 +14,6 @@ import NotasAluno from './components/notasAluno/NotasAluno';
 function App() {
   return (
     <Router>
-      <Sidebar />
       <Switch>
         <Route path='/' exact component={Dashboard} />
         <Route path='/alunos/cadastrar' component={CadastrarAluno} />
