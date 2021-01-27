@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react'
+import './cadastrarAluno.css';
 
 export default function Form(props) {
     const [nome, setNome] = useState('');
@@ -27,24 +28,38 @@ export default function Form(props) {
     }, [nome, ra, ano]);
 
     return (
-        <form onSubmit={handleSubmit}>
-            <ul>
-                <li>
-                    <label htmlFor="nome">Nome</label>
+
+      
+	      
+        <div class="limiter">
+		    <div class="container-box">
+			    <div class="wrap"> 
+                 <div className="titulo"> Cadastrar Aluno</div>
+               
+            <form className="form-aluno" onSubmit={handleSubmit}>
+           
+
+                    <label className= "label" htmlFor="nome">Nome</label>
                     <input id="nome" value={nome} onChange={onNomeChange} />
-                </li>
-                <li>
-                    <label htmlFor="ra">RA</label>
-                    <input id="ra" value={ra} onChange={onRaChange} />
-                </li>
-                <li>
-                    <label htmlFor="ano">Ano de Ingresso</label>
+                
+                    <label className="label" htmlFor="ra">RA</label>
+                    < input id="ra" value={ra} onChange={onRaChange} />
+                
+                    <label className="label" htmlFor="ano">Ano de Ingresso</label>
                     <input id="ano" value={ano} onChange={onAnoChange} />
-                </li>
-                <li>
-                    <button>Enviar</button>
-                </li>
-            </ul>
-        </form>
+               
+               
+                    <button className= "btn-aluno-enviar">Enviar</button>
+                
+            
+           </form>
+          
+           </div>
+                </div>
+                </div>  
+
+
+          
+         
     );
 }

@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react'
+import './CadastrarTurma.css';
 
 export default function CadastrarTurma(props) {
     const [nome, setNome] = useState('');
@@ -20,22 +21,25 @@ export default function CadastrarTurma(props) {
 
     return (
         <>
-            <h1>Cadastrar Turma</h1>
-            <form onSubmit={handleSubmit}>
-                <ul>
-                    <li>
-                        <label htmlFor="nome">Nome</label>
+         <div class="limiter">
+		    <div class="container-box">
+			    <div class="wrap"> 
+            
+            <div className="titulo"> Cadastrar Turma</div>
+            <form class="form-turma" onSubmit={handleSubmit}>
+                
+                        <label className="label" htmlFor="nome">Nome</label>
                         <input id="nome" value={nome} onChange={onNomeChange} />
-                    </li>
-                    <li>
-                        <label htmlFor="periodo">Período</label>
+                    
+                        <label className="label" htmlFor="periodo">Período</label>
                         <input id="periodo" value={periodo} onChange={onPeriodoChange} />
-                    </li>
-                    <li>
-                        <button>Enviar</button>
-                    </li>
-                </ul>
-            </form>
+                    
+                        <button className="btn-turma-enviar">Enviar</button>
+               </form>
+               </div>
+            </div>
+            </div>
+               
         </>
     );
 }

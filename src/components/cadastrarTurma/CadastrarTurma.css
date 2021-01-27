@@ -1,0 +1,115 @@
+.limiter{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-box{
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: #f2f2f2;  
+}
+
+.wrap{
+  width: 390px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 77px 55px 33px 55px;
+
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+  .titulo{
+    display: flex;
+    font-size: 32px;
+    color: #324494;
+    align-items: center;
+    margin: auto;
+  }
+
+
+  .form-turma{
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    font-family: Verdana,Tahoma,sans-serif;
+    font-size: 16px;
+    width: 100%;
+  }
+.label{
+    display: flex;
+    align-content: flex-start;
+    align-items: center;
+    font-size: 13px;
+    color: #324494;
+}
+ 
+
+input {
+  outline: none;
+  border: none;
+  width: 100%;
+  position: relative;
+  border-bottom: solid #cfcccc;
+  line-height: 1;
+    }
+
+
+  .btn-turma-enviar {
+    margin-top: 20px;
+    border-radius: 9px;
+    background-color: #324494;
+    border: none;
+    color: white; 
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    height: 45px;
+
+  }
+
+  @media screen and (max-width: 900px) and (min-width: 550px) {
+    .informacao-5 {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 550px) {
+    .informacao-5 {
+      display: none;
+    }
+    .informacao-4 {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 300px) {
+    .informacao-5 {
+      display: none;
+    }
+    .informacao-4 {
+      display: none;
+    }
+    .informacao-3 {
+      display: none;
+    }
+    .informacao-2 {
+      display: none;
+    }
+  }

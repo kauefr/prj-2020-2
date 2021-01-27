@@ -7,9 +7,8 @@ function Alunos(props) {
     return (
         <div className="container" >
             <div className="options" >
-                <h1>Alunos</h1>
-                <Link to="/alunos/cadastrar">Cadastrar Aluno</Link>
-                <input type="text" className="search" name="search" placeholder="Pesquisar Aluno.." >
+                <Link to="/alunos/cadastrar" > <button className="btn-cadastrar"> Cadastrar Aluno </button> </Link>
+                <input type="text" className="search" name="search" placeholder="Pesquisar Aluno..." >
                 </input>
             </div>
             <AlunoTable />
