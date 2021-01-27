@@ -1,4 +1,4 @@
-.limiter{
+/*.limiter{
   width: 100%;
   margin: 0 auto;
 }
@@ -19,7 +19,7 @@
 }
 
 .wrap{
-  width: 390px;
+  width: 600px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -31,27 +31,94 @@
   -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
   -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
 }
+*/
 
-.titulo{
-  display: flex;
-  font-size: 32px;
-  color: #324494;
-  align-items: center;
+
+
+.container {
+  display: grid;
   margin: auto;
+  width: 70%;
+  grid-template-columns: 1fr;
+  margin-top: 60px;
+}
+
+.options {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  
+  margin: 0 15px;
+  height: 45px;
 }
 
   .btn-cadastrar-turma {
     
-      color: #ffffff;
-      background-color: #4320c0;
-      padding: 12px 25px;
-      font-size: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      border: 0;
-      border-radius: 25px;
-      outline: 0;
-      box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    background-color: #4320c0;
+    padding: 12px 25px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 25px;
+    outline: 0;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+
+  }
+
+  .btn-cadastrar:hover {
+    box-shadow: 0 10px 10px 0 rgba(110, 110, 110, 0.24), 0 17px 50px 0 rgba(126, 125, 125, 0.19);
     
+  }
+      .table-turmas {
+        margin-top: 10px;
+        box-shadow: 0 4px 4px 0 rgba(99, 98, 98, 0.2), 0 6px 15px 0 rgba(124, 123, 123, 0.19);
+        border-radius: 3px;
       }
-  
+      
+      .table-turmas th {
+        text-align: left;
+        background: #4320c0;
+        padding: 10px;
+        color: white;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        
+      }
+      
+      .table-turmas td {
+        border: #ececec 1px solid;
+        text-align: left;
+        padding: 10px;
+      }
+      
+      @media screen and (max-width: 900px) and (min-width: 550px) {
+        .informacao-5 {
+          display: none;
+        }
+      }
+      
+      @media screen and (max-width: 550px) {
+        .informacao-5 {
+          display: none;
+        }
+        .informacao-4 {
+          display: none;
+        }
+      }
+      
+      @media screen and (max-width: 300px) {
+        
+        .informacao-3 {
+          display: none;
+        }
+        .informacao-4 {
+          display: none;
+        }
+        .informacao-1 {
+          display: none;
+        }
+      }

@@ -17,30 +17,32 @@ export default function Turmas(props) {
     const rows = turmas.map((turma, index) => <TurmaRow key={index} {...turma} />);
     return (
         <>
+        <div className="container" >
+            <div className="options" >
+                      <Link to="/turmas/cadastrar">
+                            <button className="btn-cadastrar-turma">
+                                Cadastrar Turma
+                            </button>
+                        </Link>
+</div>
 
-             
-        <div className="limiter">
-		    <div className="container-box">
-			    <div className="wrap">
-            <h1>Turmas</h1>
-            <Link to="/turmas/cadastrar">
-            <button className="btn-cadastrar-turma">Cadastrar Turma</button></Link>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Turma</th>
-                        <th>Período</th>
-                        <th>Visualizar</th>
-                    </tr>
-                </thead>
+         <table id="turmas" className="table-turmas" cellSpacing="0" width="100%" >
+            <thead>
+                <tr>
+                    <th className="informacao-1" width="30%">Turma</th>
+                    <th className="informacao-2" width="15%">Período</th>
+                    <th className="informacao-4" width="15%">Visualizar</th>
+                    
+                </tr>
+            </thead>
                 <tbody>
                     {rows}
                 </tbody>
             </table>
     
             </div>
-        </div>
-        </div>
+        
+        
         </>
     );
 }
