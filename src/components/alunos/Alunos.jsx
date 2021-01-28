@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import './Alunos.css';
 import AlunoTable from './AlunoTable';
 import {getAll} from '../../util'
 
