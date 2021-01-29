@@ -40,7 +40,7 @@ body{
   }
 
       .table-turmas {
-        margin-top: 10px;
+        
         box-shadow: 0 4px 4px 0 rgba(99, 98, 98, 0.2), 0 6px 15px 0 rgba(124, 123, 123, 0.19);
         border-spacing: 1; 
         border-collapse: collapse; 

@@ -1,0 +1,78 @@
+.container {
+  display: grid;
+  margin: auto;
+  width: 70%;
+  grid-template-columns: 1fr;
+  margin-top: 60px;
+}
+
+.options {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  margin: 0 15px;
+  height: 45px;
+}
+
+.table-atribuir-notas{
+  box-shadow: 0 4px 4px 0 rgba(99, 98, 98, 0.2), 0 6px 15px 0 rgba(124, 123, 123, 0.19);
+  border-spacing: 1; 
+  border-collapse: collapse; 
+  background:white;
+  border-radius:5px;
+  overflow:hidden;
+  text-align: left;
+  width:100%;
+  margin:0 auto;
+  position:relative;
+  margin-bottom:30px ;
+
+}
+
+.table-atribuir-notas tr {
+  text-align: center;
+  background: #4320c0;
+  padding: 10px;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  height:48px;
+  position: center;
+  
+}
+
+.table-atribuir-notas td {
+  border: #ececec 1px solid;
+  text-align: left;
+  padding: 10px;
+}
+
+@media screen and (max-width: 900px) and (min-width: 550px) {
+  .informacao-5 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .informacao-5 {
+    display: none;
+  }
+  .informacao-4 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  
+  .informacao-3 {
+    display: none;
+  }
+  .informacao-4 {
+    display: none;
+  }
+  .informacao-1 {
+    display: none;
+  }
+}

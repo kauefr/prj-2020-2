@@ -4,7 +4,7 @@ import Sidebar from './components/sidebar/Sidebar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Dashboard from './components/dashboard/Dashboard'
 import Alunos from './components/alunos/Alunos';
-import Atividades from './pages/Atividades';
+import Atividades from './components/atividades/Atividades';
 import Presenca from './pages/Presenca';
 import Relatorios from './pages/Relatorios';
 import Turmas from './components/turmas/Turmas';

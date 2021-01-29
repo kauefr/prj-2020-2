@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import './NotasAluno.css';
+import { Link } from 'react-router-dom'
 
 export default function NotasAluno(props) {
     const { id } = useParams();
@@ -28,20 +30,34 @@ export default function NotasAluno(props) {
 
     return (
         <>
-            <h1>Notas de {aluno.Nome}</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Disciplina</th>
-                        <th>P1</th>
-                        <th>P2</th>
-                        <th>Média</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {rows}
-                </tbody>
-            </table>
+                 
+                <div className="container" >
+                <h3>Notas de {aluno.Nome}</h3>
+                     <div className="options" >
+                      {/* adicionar link para a página de atribuição de nota*/} 
+                      {/*  rota temporária pra visualização de layout em home */} <Link to="/atividades"> 
+                            <button className="btn-atribuir-nota">
+                                Atribuir nota
+                            </button>
+                        </Link> 
+                      </div>
+                        
+                            <table className="table-notas" cellSpacing="0" width="100%" >
+                                <thead>
+                                  <tr>
+                                    <th>Disciplina</th>
+                                    <th>P1</th>
+                                    {/* mudei o nome de p2 para Trabalhos, todas tem o mesmo peso*/}
+                                    <th>Trabalhos</th> 
+                                    <th>Participação</th>
+                                    <th>Média</th>
+                                  </tr>
+                                </thead>
+                                 <tbody>
+                                    {rows}
+                                 </tbody>
+                            </table>
+                </div>
         </>
     );
 }
