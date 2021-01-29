@@ -15,7 +15,7 @@ export default function AlunoTable(props) {
 
     const rows = alunos.map((aluno, index) => <AlunoRow key={index} {...aluno} />);
     return (
-        <table id="contact-detail" className="table" cellSpacing="0" width="100%" >
+        <table  className="table-alunos" cellSpacing="0" width="100%" >
             <thead>
                 <tr>
                     <th className="informacao-1" width="30%">Nome</th>

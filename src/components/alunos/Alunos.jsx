@@ -5,6 +5,7 @@ import AlunoTable from './AlunoTable';
 
 function Alunos(props) {
     return (
+        
         <div className="container" >
             <div className="options" >
                 <Link to="/alunos/cadastrar" > <button className="btn-cadastrar"> Cadastrar Aluno </button> </Link>

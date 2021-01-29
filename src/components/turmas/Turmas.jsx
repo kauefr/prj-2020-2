@@ -18,31 +18,32 @@ export default function Turmas(props) {
     return (
         <>
         <div className="container" >
-            <div className="options" >
+                <div className="options" >
                       <Link to="/turmas/cadastrar">
                             <button className="btn-cadastrar-turma">
                                 Cadastrar Turma
                             </button>
                         </Link>
-</div>
+           </div>
 
          <table id="turmas" className="table-turmas" cellSpacing="0" width="100%" >
             <thead>
                 <tr>
                     <th className="informacao-1" width="30%">Turma</th>
-                    <th className="informacao-2" width="15%">Período</th>
-                    <th className="informacao-4" width="15%">Visualizar</th>
-                    
+                    <th className="informacao-2" width="20%">Período</th>
+                    <th className="informacao-3" width="15%">Visualizar</th>
                 </tr>
             </thead>
                 <tbody>
-                    {rows}
+                   <td> {rows}</td>
+                   <td> {rows}</td>
+                   <td><Link to="/turmas/:id" > Detalhes da Turma </Link>
+                   <Link to="" > Editar Turma </Link></td>
                 </tbody>
             </table>
     
             </div>
-        
-        
+                   
         </>
     );
 }
