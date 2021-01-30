@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react'
 import './CadastrarTurma.css';
 import Step1 from './Step1';
+import Step2 from './Step2';
 
 export default function CadastrarTurma(props) {
     const [turma, setTurma] = useState({
@@ -33,7 +34,10 @@ export default function CadastrarTurma(props) {
                 handleSubmit={handleStep1}
                 handleNomeInput={(e) => { setTurma({ ...turma, Nome: e.target.value }) }}
                 handlePeriodoInput={(e) => { setTurma({ ...turma, Periodo: e.target.value }) }}
-            />
+            />;
+            break;
+        case 2:
+            content = <Step2 />;
             break;
         default:
             content = <h1>Erro: Passo inválido.</h1>
