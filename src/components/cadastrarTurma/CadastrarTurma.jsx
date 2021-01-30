@@ -1,45 +1,43 @@
 import React, { useCallback, useState } from 'react'
 import './CadastrarTurma.css';
+import Step1 from './Step1';
 
 export default function CadastrarTurma(props) {
-    const [nome, setNome] = useState('');
-    function onNomeChange(event) { setNome(event.target.value) }
+    const [turma, setTurma] = useState({
+        Nome: '',
+        Periodo: '',
+        Alunos: [],
+        Disciplinas: []
+    });
 
-    const [periodo, setPeriodo] = useState('');
-    function onPeriodoChange(event) { setPeriodo(event.target.value) }
-
-    const handleSubmit = useCallback(async (event) => {
+    const handleStep1 = useCallback(async (event) => {
         event.preventDefault();
         const response = await fetch("http://localhost:3333/Turmas", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ Nome: nome, Periodo: periodo })
+            body: JSON.stringify({ Nome: turma.Nome, Periodo: turma.Periodo })
         });
         const data = await response.json();
         console.log(data);
-    }, [nome, periodo]);
+    }, [turma]);
 
-    return (
-        <>
-         <div class="limiter">
-		    <div class="container-box">
-			    <div class="wrap"> 
-            
-            <div className="titulo"> Cadastrar Turma</div>
-            <form class="form-turma" onSubmit={handleSubmit}>
-                
-                        <label className="label" htmlFor="nome">Nome</label>
-                        <input id="nome" value={nome} onChange={onNomeChange} />
-                    
-                        <label className="label" htmlFor="periodo">Período</label>
-                        <input id="periodo" value={periodo} onChange={onPeriodoChange} />
-                    
-                        <button className="btn-turma-enviar">Enviar</button>
-               </form>
-               </div>
-            </div>
-            </div>
-               
-        </>
-    );
+    const [step, setStep] = useState(1);
+
+    let page;
+
+    switch (step) {
+        case 1:
+            page = <Step1
+                Nome={turma.Nome}
+                Periodo={turma.Periodo}
+                handleSubmit={handleStep1}
+                handleNomeInput={(e) => { setTurma({ ...turma, Nome: e.target.value }) }}
+                handlePeriodoInput={(e) => { setTurma({ ...turma, Periodo: e.target.value }) }}
+            />
+            break;
+        default:
+            page = <></>
+    }
+
+    return page;
 }
