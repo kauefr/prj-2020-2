@@ -23,11 +23,11 @@ export default function CadastrarTurma(props) {
 
     const [step, setStep] = useState(1);
 
-    let page;
+    let content;
 
     switch (step) {
         case 1:
-            page = <Step1
+            content = <Step1
                 Nome={turma.Nome}
                 Periodo={turma.Periodo}
                 handleSubmit={handleStep1}
@@ -36,8 +36,8 @@ export default function CadastrarTurma(props) {
             />
             break;
         default:
-            page = <></>
+            content = <h1>Erro: Passo inválido.</h1>
     }
 
-    return page;
+    return content;
 }
