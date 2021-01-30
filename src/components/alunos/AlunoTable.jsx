@@ -1,21 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import AlunoRow from './AlunoRow'
 import { Link } from 'react-router-dom'
 
 
 export default function AlunoTable(props) {
-    const [alunos, setAlunos] = useState([]);
+    const rows = props.alunos.map((aluno, index) => <AlunoRow key={index} {...aluno} />);
 
-    useEffect(() => {
-        async function fetchData() {
-            const response = await fetch("http://localhost:3333/Alunos");
-            const data = await response.json();
-            setAlunos(data);
-        };
-        fetchData();
-    }, []);
-
-    const rows = alunos.map((aluno, index) => <AlunoRow key={index} {...aluno} />);
     return (
         <table className="table-alunos" cellSpacing="0" width="100%" >
             <thead>
