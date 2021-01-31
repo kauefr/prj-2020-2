@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
-import { apiAddress } from '../../util.js'
+import React, { useEffect, useState } from 'react'
+import { apiAddress, getAll } from '../../util.js'
 import './CadastrarTurma.css';
 import Step1 from './Step1';
 import Step2 from './Step2';
+import Step3 from './Step3.jsx';
 
 export default function CadastrarTurma(props) {
     //Objeto do Modelo, usado nas props dos outros componentes
@@ -34,6 +35,24 @@ export default function CadastrarTurma(props) {
         setTurma({ ...turma, Disciplinas: turma.Disciplinas.filter((v, j) => i !== j) });
     }
 
+    //Variáveis e handlers do componente Step3
+    const [alunos, setAlunos] = useState([]);
+    const [checked, setChecked] = useState([]);
+    function handleCheck(i) {
+        let newChecked = [...checked];
+        newChecked[i] = !(newChecked[i]);
+        setChecked(newChecked);
+        setTurma({...turma, Alunos: alunos.filter((a, j)=>(newChecked[j]))})
+    }
+    
+    //Carrega a lista de alunos
+    useEffect(() => {
+        getAll("Alunos", (alunos) => {
+            setAlunos(alunos);
+            setChecked(Array(alunos.length).fill(false));
+        });
+    }, []);
+
     //Instancia o componente correto baseado na etapa atual
     const [step, setStep] = useState(1);
     let content;
@@ -63,7 +82,12 @@ export default function CadastrarTurma(props) {
             break;
         case 3:
             //Passo 3: alunos
-            content = <div></div>;
+            content = <Step3 
+            alunos={alunos}
+            checked={checked}
+            handleCheck={handleCheck}
+            handleSubmit={handleSubmit}
+            />;
             break;
         default:
             //Isto nunca deve aparecer
