@@ -12,18 +12,46 @@ export default function CadastrarTurma(props) {
         Periodo: ''
     });
     const [disciplinas, setDisciplinas] = useState([]);
-    const [alunosSelecionados, setAlunosSelecionados] = useState([]);
 
     //Função responsável por persistir os dados no backend
     async function handleSubmit() {
+        //Seleciona os alunos da turma
+        const alunosSelecionados = alunos.filter((a, i) => checked[i]);
         //Persiste a Turma
-        const response = await fetch(apiAddress + 'Turmas', {
+        const newTurma = await fetch(apiAddress + 'Turmas', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(turma)
-        });
-        const data = await response.json();
-        console.log(data);
+        }).then(r => r.json());
+
+        //Persiste as disciplinas
+        const newDisciplinas = (await Promise.allSettled(disciplinas.map(d => {
+            d.Turma = newTurma;
+            return fetch(apiAddress + 'Disciplinas', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(d)
+            }).then(r => r.json());
+        }))).map(p => p.value);
+        //Atualiza os alunos
+        await Promise.all(alunosSelecionados.map(a => {
+            a.Turma = newTurma;
+            return fetch(
+                apiAddress + 'Alunos/' + a.id, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(a)
+            });
+        }));
+        //Vincula as disciplinas aos alunos
+        const disciplinaAluno = {P1: 0, P2: 0, Media: 0};
+        await Promise.all(...alunosSelecionados.map(a => newDisciplinas.map(d => {
+            return fetch(apiAddress + 'DisciplinaAlunos', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({...disciplinaAluno, AlunoId: a.id, DisciplinaId: d.id})
+            })
+        })));
     }
 
     //Variáveis e handlers do componente Step2
@@ -33,7 +61,7 @@ export default function CadastrarTurma(props) {
         setCurrentDisciplina({ Nome: '' });
     }
     function handleRemoveDisciplina(i) {
-        setDisciplinas(disciplinas.filter((d, j)=>i !== j));
+        setDisciplinas(disciplinas.filter((d, j) => i !== j));
     }
 
     //Variáveis e handlers do componente Step3
@@ -43,9 +71,8 @@ export default function CadastrarTurma(props) {
         let newChecked = [...checked];
         newChecked[i] = !(newChecked[i]);
         setChecked(newChecked);
-        setAlunosSelecionados(alunosSelecionados.filter((a, j)=>(newChecked[j])));
     }
-    
+
     //Carrega a lista de alunos
     useEffect(() => {
         getAll("Alunos", (alunos) => {
@@ -83,11 +110,11 @@ export default function CadastrarTurma(props) {
             break;
         case 3:
             //Passo 3: alunos
-            content = <Step3 
-            alunos={alunos}
-            checked={checked}
-            handleCheck={handleCheck}
-            handleSubmit={handleSubmit}
+            content = <Step3
+                alunos={alunos}
+                checked={checked}
+                handleCheck={handleCheck}
+                handleSubmit={handleSubmit}
             />;
             break;
         default:

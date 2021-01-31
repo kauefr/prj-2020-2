@@ -16,7 +16,7 @@ export default function Step2(props) {
                 <div className="wrap">
                     <div className="titulo">Adicionar Disciplinas</div>
                     <label htmlFor="disciplina">Nome da Disciplina</label>
-                    <input id="disciplina" value={props.current.Nome} onInput={props.handleNomeInput} />
+                    <input id="disciplina" value={props.current.Nome} onChange={props.handleNomeInput} />
                     <button onClick={props.handleAddDisciplina}>Adicionar Disciplina</button>
                     <table>
                         <thead>
