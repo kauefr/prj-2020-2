@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function AlunoRow(props) {
     return (
@@ -7,6 +8,7 @@ export default function AlunoRow(props) {
             <td className="informacao-3">{props.Ra}</td>
             <td className="informacao-4">{props.TurmaId || "Sem Turma"}</td>
             <td className="informacao-5">{props.AnoIngresso}</td>
+            <td><Link to={"/notas/" + props.id}>Notas</Link></td>
         </tr>
     );
 }

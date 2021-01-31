@@ -1,7 +1,5 @@
 import React from 'react'
 import AlunoRow from './AlunoRow'
-import { Link } from 'react-router-dom'
-
 
 export default function AlunoTable(props) {
     const rows = props.alunos.map((aluno, index) => <AlunoRow key={index} {...aluno} />);
@@ -15,15 +13,10 @@ export default function AlunoTable(props) {
                     <th className="informacao-4" width="15%">Turma</th>
                     <th className="informacao-5" width="15%">Ano</th>
                     <th className="informacao-5" width="15%">Notas</th>
-                    
                 </tr>
             </thead>
             <tbody>
-                <td>{rows}</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><Link to={"/notas/:id" + props.id}>Notas</Link></td>
+                {rows}
             </tbody>
         </table>
     );

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import './Alunos.css';
 import AlunoTable from './AlunoTable';
-import {getAll} from '../../util'
+import { getAll } from '../../util'
 
 function Alunos(props) {
     const [alunos, setAlunos] = useState([]);
@@ -12,7 +12,6 @@ function Alunos(props) {
     }, []);
 
     return (
-        
         <div className="container" >
             <div className="options" >
                 <Link to="/alunos/cadastrar" > <button className="btn-cadastrar"> Cadastrar Aluno </button> </Link>
