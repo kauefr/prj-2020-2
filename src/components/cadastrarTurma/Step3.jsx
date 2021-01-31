@@ -8,7 +8,7 @@ export default function Step3(props) {
                 <input
                     type='checkbox'
                     checked={props.checked[i]}
-                    onInput={(e) => { props.handleCheck(i) }}
+                    onChange={(e) => { props.handleCheck(i) }}
                 />
             </td>
             <td>{a.Nome}</td>
