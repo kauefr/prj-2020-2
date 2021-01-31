@@ -4,12 +4,12 @@ import './CadastrarTurma.css'
 export default function Step1(props) {
 
     return (
-        <div class="limiter">
-            <div class="container-box">
-                <div class="wrap">
+        <div className="limiter">
+            <div className="container-box">
+                <div className="wrap">
                     <div className="titulo">Dados da Turma</div>
 
-                    <form class="form-turma" onSubmit={props.handleSubmit}>
+                    <form className="form-turma" onSubmit={props.handleSubmit}>
 
                         <label className="label" htmlFor="nome">Nome da Turma</label>
                         <input id="nome" value={props.Nome} onInput={props.handleNomeInput} />
