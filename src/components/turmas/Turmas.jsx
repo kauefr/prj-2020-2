@@ -27,14 +27,11 @@ export default function Turmas(props) {
                 <tr>
                     <th className="informacao-1" width="30%">Turma</th>
                     <th className="informacao-2" width="20%">Período</th>
-                    <th className="informacao-3" width="15%">Visualizar</th>
+                    <th className="informacao-3" width="15%">Ações</th>
                 </tr>
             </thead>
                 <tbody>
-                   <td> {rows}</td>
-                   <td> {rows}</td>
-                   <td><Link to="/turmas/:id" > Detalhes da Turma </Link>
-                   <Link to="" > Editar Turma </Link></td>
+                   {rows}
                 </tbody>
             </table>
     
