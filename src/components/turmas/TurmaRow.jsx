@@ -8,7 +8,11 @@ export default function TurmaRow(props) {
         <tr>
             <td>{props.Nome}</td>
             <td>{props.Periodo}</td>
-            <td><Link to={"/turmas/" + props.id}>Visualizar</Link></td>
+            <td>
+                <Link to={"/turmas/" + props.id}>Detalhes</Link>
+                <br />
+                <Link to="">Editar</Link>
+            </td>
         </tr>
 
     );
