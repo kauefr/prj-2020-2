@@ -9,13 +9,14 @@ export default function CadastrarTurma(props) {
     //Objeto do Modelo, usado nas props dos outros componentes
     const [turma, setTurma] = useState({
         Nome: '',
-        Periodo: '',
-        Alunos: [],
-        Disciplinas: []
+        Periodo: ''
     });
+    const [disciplinas, setDisciplinas] = useState([]);
+    const [alunosSelecionados, setAlunosSelecionados] = useState([]);
 
     //Função responsável por persistir os dados no backend
     async function handleSubmit() {
+        //Persiste a Turma
         const response = await fetch(apiAddress + 'Turmas', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -28,11 +29,11 @@ export default function CadastrarTurma(props) {
     //Variáveis e handlers do componente Step2
     const [currentDisciplina, setCurrentDisciplina] = useState({ Nome: '' });
     function handleAddDisciplina() {
-        setTurma({ ...turma, Disciplinas: [...turma.Disciplinas, currentDisciplina] });
+        setDisciplinas([...disciplinas, currentDisciplina]);
         setCurrentDisciplina({ Nome: '' });
     }
     function handleRemoveDisciplina(i) {
-        setTurma({ ...turma, Disciplinas: turma.Disciplinas.filter((v, j) => i !== j) });
+        setDisciplinas(disciplinas.filter((d, j)=>i !== j));
     }
 
     //Variáveis e handlers do componente Step3
@@ -42,7 +43,7 @@ export default function CadastrarTurma(props) {
         let newChecked = [...checked];
         newChecked[i] = !(newChecked[i]);
         setChecked(newChecked);
-        setTurma({...turma, Alunos: alunos.filter((a, j)=>(newChecked[j]))})
+        setAlunosSelecionados(alunosSelecionados.filter((a, j)=>(newChecked[j])));
     }
     
     //Carrega a lista de alunos
@@ -71,7 +72,7 @@ export default function CadastrarTurma(props) {
             //Passo 2: disciplinas
             content = <Step2
                 current={currentDisciplina}
-                disciplinas={turma.Disciplinas}
+                disciplinas={disciplinas}
                 handleNomeInput={(e) => {
                     setCurrentDisciplina({ Nome: e.target.value })
                 }}
