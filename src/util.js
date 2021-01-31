@@ -1,4 +1,4 @@
-const apiAddress = "http://localhost:3333/";
+export const apiAddress = "http://localhost:3333/";
 
 export function getAll(endpoint, setter) {
     async function fetchData(endpoint) {
