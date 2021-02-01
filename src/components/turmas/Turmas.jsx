@@ -23,6 +23,7 @@ export default function Turmas(props) {
                     </Link>
                 </div>
 
+                <div className="table-turmas-limiter">
                 <table id="turmas" className="table-turmas" cellSpacing="0" width="100%" >
                     <thead>
                         <tr>
@@ -35,6 +36,7 @@ export default function Turmas(props) {
                         {rows}
                     </tbody>
                 </table>
+                </div>
             </div>
         </>
     );

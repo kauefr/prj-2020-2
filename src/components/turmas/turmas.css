@@ -19,6 +19,9 @@ body{
   height: 45px;
 }
 
+.table-turmas-limiter{
+  margin-top: 20px;
+}
 .btn-cadastrar-turma {
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
