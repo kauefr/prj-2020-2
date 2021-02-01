@@ -20,6 +20,7 @@ body{
 }
 
 .btn-cadastrar {
+  font-family: 'Roboto', sans-serif;
   color: #ffffff;
   background-color: #425cd1;
   padding: 12px 20px;
@@ -37,11 +38,12 @@ body{
 }
 
 .search {
+  font-family: 'Roboto', sans-serif;
   width: 30%;
   border-radius: 9px;
   margin-top: 0;
   border: 2px solid rgb(228, 225, 225);
-  font-size: 16px;
+  font-size: 14px;
   background-color: white;
  
   background-repeat: no-repeat;
@@ -54,6 +56,7 @@ body{
 }
 
 .table-alunos {
+  font-family: 'Roboto', sans-serif;
   margin-top: 10px;
   box-shadow: 0 4px 4px 0 rgba(99, 98, 98, 0.2), 0 6px 15px 0 rgba(124, 123, 123, 0.19);
   border-spacing: 1; 
@@ -72,19 +75,20 @@ body{
   color: white;
   font-size: 12px;
   letter-spacing: 1px;
-  text-transform: uppercase;
   height:48px;
+  
   
 
 }
 .table-alunos th {
+  
   text-align: left;
   background: #1505a7;
   padding: 10px;
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  
     
 }
 

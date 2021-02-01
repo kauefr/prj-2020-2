@@ -33,6 +33,7 @@
 }
 
   .titulo{
+    font-family: 'Roboto', sans-serif;
     display: flex;
     align-content: flex-start;
     align-items: center;
@@ -55,11 +56,12 @@
   }
 /*alinhar label ao lado do input*/
   .label{
+    font-family: 'Roboto', sans-serif;
     display: flex;
     align-content: flex-start;
     align-items: center;
     font-size: 13px;
-    color: #151b31;
+    color: #f7f6fa;
     font-size: 15px;
     margin-top: 10px;
     margin-bottom: 0px;
@@ -71,6 +73,7 @@
   }
 
   input {
+    font-family: 'Roboto', sans-serif;
     outline: none;
     border: none;
     width: 100%;
@@ -81,6 +84,7 @@
 
 
   textarea {
+    font-family: 'Roboto', sans-serif;
     outline: none;
     border: none;
   }
@@ -92,6 +96,7 @@
 
   .btn-aluno-enviar {
     margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
     border-radius: 9px;
     background-color: #425cd1;
     border: none;

@@ -19,7 +19,7 @@
 }
 
 .wrap{
-  width: 390px;
+  width: 70%;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -33,9 +33,10 @@
 }
 
   .titulo{
+    font-family: 'Roboto';
     display: flex;
     font-size: 32px;
-    color: #324494;
+    color: #1505a7;
     align-items: center;
     margin: auto;
   }
@@ -52,12 +53,15 @@
     font-size: 16px;
     width: 100%;
   }
-.label{
+
+  label{
+    margin-top: 20px;
+    font-family: 'Roboto';
     display: flex;
     align-content: flex-start;
     align-items: center;
-    font-size: 13px;
-    color: #324494;
+    font-size: 16px;
+    color: #1505a7;
 }
  
 
@@ -66,7 +70,8 @@ input {
   border: none;
   width: 100%;
   border-bottom: solid #cfcccc;
-  line-height: 1;
+  line-height: 0,5px;
+
     }
 
 
