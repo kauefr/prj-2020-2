@@ -18,7 +18,9 @@ function Alunos(props) {
                 <input type="text" className="search" name="search" placeholder="Pesquisar Aluno..." >
                 </input>
             </div>
+            <div className="table-limiter">
             <AlunoTable alunos={alunos} />
+            </div>
         </div>
     );
 }

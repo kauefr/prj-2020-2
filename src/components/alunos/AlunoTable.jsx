@@ -4,7 +4,8 @@ import AlunoRow from './AlunoRow'
 export default function AlunoTable(props) {
     const rows = props.alunos.map((aluno, index) => <AlunoRow key={index} {...aluno} />);
 
-    return (
+     return (
+    //    <div className="table-limiter">  </div> 
         <table className="table-alunos" cellSpacing="0" width="100%" >
             <thead>
                 <tr>
