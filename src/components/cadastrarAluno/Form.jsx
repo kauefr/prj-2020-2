@@ -28,38 +28,26 @@ export default function Form(props) {
     }, [nome, ra, ano]);
 
     return (
+        <div className="limiter">
+            <div className="container-box">
+                <div className="wrap">
+                    <div className="titulo"> Cadastrar Aluno</div>
 
-      
-	      
-        <div class="limiter">
-		    <div class="container-box">
-			    <div class="wrap"> 
-                 <div className="titulo"> Cadastrar Aluno</div>
-               
-            <form className="form-aluno" onSubmit={handleSubmit}>
-           
+                    <form className="form-aluno" onSubmit={handleSubmit}>
 
-                    <label className= "label" htmlFor="nome">Nome</label>
-                    <input id="nome" value={nome} onChange={onNomeChange} />
-                
-                    <label className="label" htmlFor="ra">RA</label>
-                    < input id="ra" value={ra} onChange={onRaChange} />
-                
-                    <label className="label" htmlFor="ano">Ano de Ingresso</label>
-                    <input id="ano" value={ano} onChange={onAnoChange} />
-               
-               
-                    <button className= "btn-aluno-enviar">Enviar</button>
-                
-            
-           </form>
-          
-           </div>
+                        <label className="label" htmlFor="nome">Nome</label>
+                        <input id="nome" value={nome} onChange={onNomeChange} />
+
+                        <label className="label" htmlFor="ra">RA</label>
+                        < input id="ra" value={ra} onChange={onRaChange} />
+
+                        <label className="label" htmlFor="ano">Ano de Ingresso</label>
+                        <input id="ano" value={ano} onChange={onAnoChange} />
+
+                        <button className="btn-aluno-enviar">Enviar</button>
+                    </form>
                 </div>
-                </div>  
-
-
-          
-         
+            </div>
+        </div>
     );
 }

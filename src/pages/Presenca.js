@@ -3,8 +3,8 @@ import React from 'react';
 
 function Presenca() {
   return (
-    <div class="wrapper">
-    <div class="container">
+    <div className="wrapper">
+    <div className="container">
        <h1> Presença</h1>
     </div>
   </div>

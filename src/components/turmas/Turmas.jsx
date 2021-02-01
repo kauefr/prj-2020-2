@@ -8,6 +8,7 @@ export default function Turmas(props) {
     const [turmas, setTurmas] = useState([]);
     useEffect(() => {
         getAll("Turmas",setTurmas);
+        return;
     }, []);
 
     const rows = turmas.map((turma, index) => <TurmaRow key={index} {...turma} />);
