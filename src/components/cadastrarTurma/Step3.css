@@ -1,9 +1,11 @@
-.limiter-step2{
+/* coisas a corrigir nessa tela */
+
+.limiter-step3{
     width: 100%;
     margin: 0 auto;
   }
   
-  .container-box-step2{
+  .container-box-step3{
     width: 100%;  
     min-height: 100vh;
     display: -webkit-box;
@@ -18,7 +20,7 @@
     background: #f2f2f2;  
   }
   
-  .wrap-step2{
+  .wrap-step3{
     width: 800px;
     background: #fff;
     border-radius: 10px;
@@ -32,7 +34,7 @@
     -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
   }
   
-    .title-1{
+    .title-3{
       font-family: 'Roboto' sans-serif;
       display: flex;
       font-size: 32px;
@@ -42,7 +44,7 @@
     }
   
   
-    .form-turma{
+    /* .form-turma{
       display: flex;
       justify-content: center;
       margin:auto;
@@ -52,7 +54,7 @@
       font-family: Verdana,Tahoma,sans-serif;
       font-size: 16px;
       width: 100%;
-    }
+    } */
   
     .title-disciplina{
       margin-top: 20px;
@@ -95,46 +97,19 @@ label{
   
   
       }
-  
-  
-    .btn-turma-avancar {
-      margin-top: 20px;
-      border-radius: 9px;
-      background-color: #425cd1;
-      border: none;
-      color: white; 
-      text-align: center;
-      text-decoration: none;
-      font-size: 16px;
-      height: 45px;
-      align-self: right;
-  
-    }
-  
-  
-    .btn-add-disciplina {
-      margin-top: 10px;
-      border-radius: 9px;
-      background-color: #425cd1;
-      border: none;
-      color: white; 
-      text-align: center;
-      text-decoration: none;
-      font-size: 14px;
-      height: 30px;
-  
-    }
-  
-    .btn-remove {
-      margin-top: 20px;
-      border-radius: 9px;
-      background-color: #425cd1;
-      border: none;
-      color: white; 
-      text-align: center;
-      text-decoration: none;
-      font-size: 15px;
-      height: 30px;
+   
+    .btn-turma-enviar {
+        margin-top: 20px;
+        font-family: 'Roboto', sans-serif;
+        border-radius: 9px;
+        background-color: #425cd1;
+        border: none;
+        color: white; 
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        height: 40px;
+        width: 70px;
   
     }
   

@@ -1,5 +1,5 @@
 import React from 'react'
-import './CadastrarTurma.css'
+import './Step3.css'
 
 export default function Step3(props) {
     const rows = props.alunos.map((a, i) => (
@@ -30,7 +30,7 @@ export default function Step3(props) {
                             {rows}
                         </tbody>
                     </table>
-                    <button className="btn-turma-enviar" onClick={props.handleSubmit}>Cadastrar Turma</button>
+                    <button className="btn-cadastrar-turma" onClick={props.handleSubmit}>Cadastrar Turma</button>
                 </div>
             </div>
         </div>
