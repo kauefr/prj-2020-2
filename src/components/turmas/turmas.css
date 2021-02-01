@@ -54,10 +54,21 @@ body{
         margin-bottom:30px ;
         
       }
+
+      .table-turmas th {
+        text-align: left;
+        background: #1505a7;
+        padding: 10px;
+        color: white;
+        font-size: 14px;
+        letter-spacing: 1px;
+        
+          
+      }
+
       
       .table-turmas tr {
         text-align: center;
-        background: #1505a7;
         padding: 10px;
         color: white;
         font-size: 13px;
