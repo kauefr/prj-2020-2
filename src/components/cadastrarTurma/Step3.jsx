@@ -23,7 +23,7 @@ export default function Step3(props) {
                     <table>
                         <thead>
                             <tr>
-                                <th colSpan='2'>Nome</th>
+                                <th className="nome-aluno" colSpan='2'>Nome do aluno:</th>
                             </tr>
                         </thead>
                         <tbody>

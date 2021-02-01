@@ -34,7 +34,19 @@
     -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
   }
   
-    .title-3{
+
+  .nome-aluno{
+    font-family: 'Roboto' sans-serif;
+    display: flex;
+    align-content: flex-start;
+    align-items: center;
+    font-size: 16px;
+    color: #324494;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+}
+    /* .title-3{
       font-family: 'Roboto' sans-serif;
       display: flex;
       font-size: 32px;
@@ -42,7 +54,7 @@
       align-items: center;
       margin: auto;
     }
-  
+   */
   
     /* .form-turma{
       display: flex;
