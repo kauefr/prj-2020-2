@@ -1,9 +1,9 @@
-.limiter-step3{
+.limiter-step1{
     width: 100%;
     margin: 0 auto;
   }
   
-  .container-box-step2{
+  .container-box-step1{
     width: 100%;  
     min-height: 100vh;
     display: -webkit-box;
@@ -18,8 +18,8 @@
     background: #f2f2f2;  
   }
   
-  .wrap-step2{
-    width: 800px;
+  .wrap-step1{
+    width: 400px;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -32,19 +32,18 @@
     -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
   }
   
-    .title-1{
-      font-family: 'Roboto' sans-serif;
+    .titulo-step1{
       display: flex;
       font-size: 32px;
       color: #324494;
       align-items: center;
       margin: auto;
+      margin-left: 15px;
+      margin-bottom: 20px;
     }
   
-  
-    .form-turma{
+      .form-turma{
       display: flex;
-      justify-content: center;
       margin:auto;
       flex-direction: column;
       background-color: white;
@@ -54,50 +53,49 @@
       width: 100%;
     }
   
-    .title-disciplina{
-      margin-top: 20px;
-      font-family: 'Roboto' sans-serif;
+    .label1{
+      font-family: 'Roboto';
       display: flex;
       align-content: flex-start;
       align-items: center;
       font-size: 16px;
       color: #324494;
+      
   }
-
-  /* label{
-    margin-top: 20px;
+   
+  .label2{
     font-family: 'Roboto';
     display: flex;
     align-content: flex-start;
     align-items: center;
     font-size: 16px;
     color: #324494;
+    
 }
-
-label{
-  margin-top: 20px;
-  font-family: 'Roboto';
-  display: flex;
-  align-content: flex-start;
-  align-items: center;
-  font-size: 16px;
-  color: #324494;
-} */
-   
   
-  input {
+  .input-nome {
     outline: none;
     border: none;
     border-bottom: solid #cfcccc;
     line-height: 0,5px;
-    width: 50%;
-    margin-right: 10px;
-  
+    width:100%;
+    align-self: center;
+    
   
       }
   
+  .input-periodo {
+     outline: none;
+     border: none;
+     border-bottom: solid #cfcccc;
+     line-height: 0,5px;
+     width:100%;
+     align-self: center;
+     
+      
+     }
   
-    .btn-turma-avancar {
+    .btn-turma-enviar {
       margin-top: 20px;
       border-radius: 9px;
       background-color: #425cd1;
@@ -107,7 +105,8 @@ label{
       text-decoration: none;
       font-size: 16px;
       height: 45px;
-      align-items: right;
+      width: 50%;
+      align-self: center;
   
     }
   

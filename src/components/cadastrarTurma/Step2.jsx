@@ -14,21 +14,21 @@ export default function Step2(props) {
         <div className="limiter">
             <div className="container-box">
                 <div className="wrap">
-                    <div className="titulo">Adicionar Disciplinas</div>
-                    <label classname="label" htmlFor="disciplina">Nome da Disciplina</label>
+                    <div className="title-1">Adicionar Disciplinas</div>
+                    <label className="label-disciplina" htmlFor="disciplina">Nome da Disciplina</label>
                     <input id="disciplina" value={props.current.Nome} onChange={props.handleNomeInput} />
                     <button class="btn-add-disciplina"onClick={props.handleAddDisciplina}>Adicionar Disciplina</button>
                     <table>
                         <thead>
                             <tr>
-                                <th colSpan='2'>Disciplina</th>
+                                <th className="title-disciplina"colSpan='2'>Disciplina</th>
                             </tr>
                         </thead>
                         <tbody>
                             {rows}
                         </tbody>
                     </table>
-                    <button className="btn-turma-enviar" onClick={props.handleSubmit}>Avançar</button>
+                    <button className="btn-turma-avancar" onClick={props.handleSubmit}>Avançar</button>
                 </div>
             </div>
         </div>

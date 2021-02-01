@@ -20,7 +20,7 @@ body{
 }
 
 .btn-cadastrar-turma {
-    
+    font-family: 'Roboto', sans-serif;
     color: #ffffff;
     background-color: #425cd1;
     padding: 12px 25px;
@@ -39,7 +39,6 @@ body{
   }
 
       .table-turmas {
-        
         box-shadow: 0 4px 4px 0 rgba(99, 98, 98, 0.2), 0 6px 15px 0 rgba(124, 123, 123, 0.19);
         border-spacing: 1; 
         border-collapse: collapse; 
@@ -58,8 +57,8 @@ body{
         background: #1505a7;
         padding: 10px;
         color: white;
-        font-size: 12px;
-        letter-spacing: 1px;
+        font-size: 13px;
+        
          height:48px;
                
       }
