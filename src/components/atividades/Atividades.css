@@ -25,21 +25,20 @@
   text-align: left;
   width:100%;
   margin:0 auto;
-  position:relative;
   margin-bottom:30px ;
 
 }
 
 .table-atribuir-notas tr {
   text-align: center;
-  background: #4320c0;
+  background: #1505a7;
   padding: 10px;
   color: white;
   font-size: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
   height:48px;
-  position: center;
+  
   
 }
 

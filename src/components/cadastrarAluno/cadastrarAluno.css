@@ -74,7 +74,6 @@
     outline: none;
     border: none;
     width: 100%;
-    position: relative;
     border-bottom: solid #cfcccc;
     line-height: 1;
       }
@@ -94,7 +93,7 @@
   .btn-aluno-enviar {
     margin-top: 20px;
     border-radius: 9px;
-    background-color: #324494;
+    background-color: #425cd1;
     border: none;
     color: white; 
     text-align: center;
